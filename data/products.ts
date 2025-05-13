@@ -375,6 +375,7 @@ export const productData = {
     },
   ],
 };
+export type ProductDataType = typeof productData;
 
 export const categoryInfo = {
   "front-office": {
@@ -466,3 +467,4 @@ export const categoryInfo = {
     ],
   },
 };
+export type CategoryInfoType = typeof categoryInfo;

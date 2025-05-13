@@ -1,30 +1,31 @@
-import { notFound } from "next/navigation"
-import Image from "next/image"
-import Link from "next/link"
-import { Button } from "@/components/ui/button"
-import { ChevronRight, ArrowRight } from "lucide-react"
-import { productData, categoryInfo } from "@/data/products"
+import { Button } from "@/components/ui/button";
+import { categoryInfo, productData } from "@/data/products";
+import { ArrowRight, ChevronRight } from "lucide-react";
+import Image from "next/image";
+import Link from "next/link";
 
 export async function generateStaticParams() {
   return Object.keys(productData).map((category) => ({
     category,
-  }))
+  }));
 }
 
 export default function ProductCategoryPage({
   params,
 }: {
-  params: { category: string }
+  params: { category: string };
 }) {
-  const { category } = params
+  const { category } = params as { category: keyof typeof productData };
 
   // Check if category exists
-  if (!productData[category]) {
-    notFound()
-  }
+  // if (!productData[category]) {
+  //   notFound()
+  // }
 
-  const products = productData[category]
-  const info = categoryInfo[category]
+  const products = productData[category];
+
+  console.log("Products:", products);
+  const info = categoryInfo[category];
 
   return (
     <main className="flex-1">
@@ -40,7 +41,9 @@ export default function ProductCategoryPage({
               Products
             </Link>
             <ChevronRight className="h-4 w-4 mx-2" />
-            <span className="text-gray-900 font-medium capitalize">{category.replace("-", " ")}</span>
+            <span className="text-gray-900 font-medium capitalize">
+              {category.replace("-", " ")}
+            </span>
           </div>
         </div>
       </div>
@@ -50,10 +53,18 @@ export default function ProductCategoryPage({
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <div className="inline-block bg-indigo-100 text-indigo-800 text-xs font-medium px-3 py-1 rounded-full mb-4">
-              {category === "front-office" ? "FRONT OFFICE" : category === "back-office" ? "BACK OFFICE" : "RETAIL"}
+              {category === "front-office"
+                ? "FRONT OFFICE"
+                : category === "back-office"
+                ? "BACK OFFICE"
+                : "RETAIL"}
             </div>
-            <h1 className="text-4xl font-bold text-gray-900 tracking-tight sm:text-5xl mb-6">{info.title}</h1>
-            <p className="text-xl text-gray-500 max-w-3xl mx-auto">{info.description}</p>
+            <h1 className="text-4xl font-bold text-gray-900 tracking-tight sm:text-5xl mb-6">
+              {info.title}
+            </h1>
+            <p className="text-xl text-gray-500 max-w-3xl mx-auto">
+              {info.description}
+            </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -76,7 +87,9 @@ export default function ProductCategoryPage({
                   <h3 className="text-xl font-semibold text-gray-900 mb-2 group-hover:text-indigo-600 transition-colors">
                     {product.title}
                   </h3>
-                  <p className="text-gray-500 mb-4">{product.shortDescription}</p>
+                  <p className="text-gray-500 mb-4">
+                    {product.shortDescription}
+                  </p>
                   <div className="flex items-center text-indigo-600 font-medium">
                     <span>Learn more</span>
                     <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
@@ -93,8 +106,12 @@ export default function ProductCategoryPage({
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
-              <h2 className="text-3xl font-bold text-gray-900 mb-6">Why Choose Our {info.title}</h2>
-              <p className="text-lg text-gray-500 mb-8">{info.benefitsDescription}</p>
+              <h2 className="text-3xl font-bold text-gray-900 mb-6">
+                Why Choose Our {info.title}
+              </h2>
+              <p className="text-lg text-gray-500 mb-8">
+                {info.benefitsDescription}
+              </p>
               <ul className="space-y-4">
                 {info.benefits.map((benefit, index) => (
                   <li key={index} className="flex items-start">
@@ -106,12 +123,21 @@ export default function ProductCategoryPage({
                         viewBox="0 0 24 24"
                         stroke="currentColor"
                       >
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth={2}
+                          d="M5 13l4 4L19 7"
+                        />
                       </svg>
                     </div>
                     <div className="ml-3">
-                      <h4 className="text-lg font-medium text-gray-900">{benefit.title}</h4>
-                      <p className="mt-1 text-gray-500">{benefit.description}</p>
+                      <h4 className="text-lg font-medium text-gray-900">
+                        {benefit.title}
+                      </h4>
+                      <p className="mt-1 text-gray-500">
+                        {benefit.description}
+                      </p>
                     </div>
                   </li>
                 ))}
@@ -133,18 +159,26 @@ export default function ProductCategoryPage({
       {/* CTA Section */}
       <section className="bg-indigo-900 text-white py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl font-bold mb-6">Ready to transform your business?</h2>
+          <h2 className="text-3xl font-bold mb-6">
+            Ready to transform your business?
+          </h2>
           <p className="text-xl text-indigo-200 mb-8 max-w-3xl mx-auto">
-            Join thousands of businesses that trust DigiPOS for their {info.title} needs.
+            Join thousands of businesses that trust DigiPOS for their{" "}
+            {info.title} needs.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
-            <Button className="bg-white text-indigo-900 hover:bg-gray-100 px-6 py-3">Schedule a Demo</Button>
-            <Button variant="outline" className="border-white text-white hover:bg-indigo-800 px-6 py-3">
+            <Button className="bg-white text-indigo-900 hover:bg-gray-100 px-6 py-3">
+              Schedule a Demo
+            </Button>
+            <Button
+              variant="outline"
+              className="border-white text-white hover:bg-indigo-800 px-6 py-3"
+            >
               Contact Sales
             </Button>
           </div>
         </div>
       </section>
     </main>
-  )
+  );
 }
