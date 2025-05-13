@@ -1,18 +1,19 @@
 import {
-  Coffee,
-  Utensils,
-  Truck,
-  Building,
-  Pill,
-  Shirt,
-  Flower,
-  Scissors,
-  ShoppingBasket,
-  ShoppingBag,
-  Users,
-  Package,
   BarChart3,
-} from "lucide-react"
+  Building,
+  Coffee,
+  Flower,
+  Package,
+  Pill,
+  Scissors,
+  Shirt,
+  ShoppingBag,
+  ShoppingBasket,
+  Truck,
+  Users,
+  Utensils,
+} from "lucide-react";
+import React from "react";
 
 export const businessTypesData = {
   restaurants: {
@@ -23,54 +24,79 @@ export const businessTypesData = {
     subtypes: [
       {
         name: "Café & Bakery",
-        icon: <Coffee className="h-5 w-5 text-indigo-600" />,
-        description: "Specialized solutions for cafés, coffee shops, and bakeries.",
+        icon: React.createElement(Coffee, {
+          className: "h-5 w-5 text-indigo-600",
+        }),
+        description:
+          "Specialized solutions for cafés, coffee shops, and bakeries.",
       },
       {
         name: "Quick Service",
-        icon: <ShoppingBag className="h-5 w-5 text-indigo-600" />,
-        description: "Fast and efficient systems for quick service restaurants.",
+        icon: React.createElement(ShoppingBag, {
+          className: "h-5 w-5 text-indigo-600",
+        }),
+        description:
+          "Fast and efficient systems for quick service restaurants.",
       },
       {
         name: "Kiosks & Food Trucks",
-        icon: <Truck className="h-5 w-5 text-indigo-600" />,
+        icon: React.createElement(Truck, {
+          className: "h-5 w-5 text-indigo-600",
+        }),
         description: "Mobile solutions for food trucks and kiosks.",
       },
       {
         name: "Dine-In Service Restaurants",
-        icon: <Utensils className="h-5 w-5 text-indigo-600" />,
+        icon: React.createElement(Utensils, {
+          className: "h-5 w-5 text-indigo-600",
+        }),
         description: "Comprehensive systems for table service restaurants.",
       },
     ],
     features: [
       {
         title: "Table Management",
-        icon: <Building className="h-5 w-5 text-indigo-600" />,
-        description: "Efficiently manage seating, reservations, and table turnover.",
+        icon: React.createElement(Building, {
+          className: "h-5 w-5 text-indigo-600",
+        }),
+        description:
+          "Efficiently manage seating, reservations, and table turnover.",
       },
       {
         title: "Menu Engineering",
-        icon: <Utensils className="h-5 w-5 text-indigo-600" />,
+        icon: React.createElement(Utensils, {
+          className: "h-5 w-5 text-indigo-600",
+        }),
         description: "Design and analyze menus to maximize profitability.",
       },
       {
         title: "Kitchen Display System",
-        icon: <Utensils className="h-5 w-5 text-indigo-600" />,
-        description: "Streamline kitchen operations with digital order management.",
+        icon: React.createElement(Utensils, {
+          className: "h-5 w-5 text-indigo-600",
+        }),
+        description:
+          "Streamline kitchen operations with digital order management.",
       },
       {
         title: "Online Ordering",
-        icon: <ShoppingBag className="h-5 w-5 text-indigo-600" />,
-        description: "Accept orders directly through your website or mobile app.",
+        icon: React.createElement(ShoppingBag, {
+          className: "h-5 w-5 text-indigo-600",
+        }),
+        description:
+          "Accept orders directly through your website or mobile app.",
       },
       {
         title: "Inventory Control",
-        icon: <Package className="h-5 w-5 text-indigo-600" />,
+        icon: React.createElement(Package, {
+          className: "h-5 w-5 text-indigo-600",
+        }),
         description: "Track ingredients and manage food costs effectively.",
       },
       {
         title: "Staff Management",
-        icon: <Users className="h-5 w-5 text-indigo-600" />,
+        icon: React.createElement(Users, {
+          className: "h-5 w-5 text-indigo-600",
+        }),
         description: "Schedule staff, track performance, and manage tips.",
       },
     ],
@@ -103,70 +129,102 @@ export const businessTypesData = {
     subtypes: [
       {
         name: "Pharmacy",
-        icon: <Pill className="h-5 w-5 text-indigo-600" />,
+        icon: React.createElement(Pill, {
+          className: "h-5 w-5 text-indigo-600",
+        }),
         description: "Specialized solutions for pharmacies and drugstores.",
       },
       {
         name: "Laundry",
-        icon: <Shirt className="h-5 w-5 text-indigo-600" />,
-        description: "Management systems for laundry and dry cleaning services.",
+        icon: React.createElement(Shirt, {
+          className: "h-5 w-5 text-indigo-600",
+        }),
+        description:
+          "Management systems for laundry and dry cleaning services.",
       },
       {
         name: "Garments",
-        icon: <Shirt className="h-5 w-5 text-indigo-600" />,
+        icon: React.createElement(Shirt, {
+          className: "h-5 w-5 text-indigo-600",
+        }),
         description: "Retail solutions for clothing and garment stores.",
       },
       {
         name: "Apparel",
-        icon: <Shirt className="h-5 w-5 text-indigo-600" />,
+        icon: React.createElement(Shirt, {
+          className: "h-5 w-5 text-indigo-600",
+        }),
         description: "POS systems for fashion and apparel retailers.",
       },
       {
         name: "Flower Shop",
-        icon: <Flower className="h-5 w-5 text-indigo-600" />,
+        icon: React.createElement(Flower, {
+          className: "h-5 w-5 text-indigo-600",
+        }),
         description: "Specialized solutions for florists and flower shops.",
       },
       {
         name: "Salon",
-        icon: <Scissors className="h-5 w-5 text-indigo-600" />,
-        description: "Management systems for salons, spas, and beauty services.",
+        icon: React.createElement(Scissors, {
+          className: "h-5 w-5 text-indigo-600",
+        }),
+        description:
+          "Management systems for salons, spas, and beauty services.",
       },
       {
         name: "Supermarket",
-        icon: <ShoppingBasket className="h-5 w-5 text-indigo-600" />,
+        icon: React.createElement(ShoppingBasket, {
+          className: "h-5 w-5 text-indigo-600",
+        }),
         description: "Comprehensive POS for supermarkets and grocery stores.",
       },
     ],
     features: [
       {
         title: "Inventory Management",
-        icon: <Package className="h-5 w-5 text-indigo-600" />,
-        description: "Track stock levels, set reorder points, and manage suppliers.",
+        icon: React.createElement(Package, {
+          className: "h-5 w-5 text-indigo-600",
+        }),
+        description:
+          "Track stock levels, set reorder points, and manage suppliers.",
       },
       {
         title: "Barcode Scanning",
-        icon: <ShoppingBag className="h-5 w-5 text-indigo-600" />,
+        icon: React.createElement(ShoppingBag, {
+          className: "h-5 w-5 text-indigo-600",
+        }),
         description: "Quickly process items with integrated barcode scanning.",
       },
       {
         title: "Customer Loyalty",
-        icon: <Users className="h-5 w-5 text-indigo-600" />,
-        description: "Build customer loyalty with points, rewards, and personalized offers.",
+        icon: React.createElement(Users, {
+          className: "h-5 w-5 text-indigo-600",
+        }),
+        description:
+          "Build customer loyalty with points, rewards, and personalized offers.",
       },
       {
         title: "Multi-channel Sales",
-        icon: <ShoppingBag className="h-5 w-5 text-indigo-600" />,
+        icon: React.createElement(ShoppingBag, {
+          className: "h-5 w-5 text-indigo-600",
+        }),
         description: "Integrate in-store, online, and mobile sales channels.",
       },
       {
         title: "Sales Analytics",
-        icon: <BarChart3 className="h-5 w-5 text-indigo-600" />,
-        description: "Gain insights into sales trends, popular products, and customer behavior.",
+        icon: React.createElement(BarChart3, {
+          className: "h-5 w-5 text-indigo-600",
+        }),
+        description:
+          "Gain insights into sales trends, popular products, and customer behavior.",
       },
       {
         title: "Employee Management",
-        icon: <Users className="h-5 w-5 text-indigo-600" />,
-        description: "Schedule staff, track performance, and manage commissions.",
+        icon: React.createElement(Users, {
+          className: "h-5 w-5 text-indigo-600",
+        }),
+        description:
+          "Schedule staff, track performance, and manage commissions.",
       },
     ],
     testimonials: [
@@ -190,4 +248,4 @@ export const businessTypesData = {
       },
     ],
   },
-}
+};

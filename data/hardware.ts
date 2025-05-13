@@ -1,11 +1,12 @@
-import { Wifi, Shield } from "lucide-react"
+import { Shield, Wifi } from "lucide-react";
 
 export const hardwareData = {
   categories: [
     {
       id: "pos-terminals",
       title: "POS Terminals",
-      description: "Reliable and efficient point of sale terminals for all business types.",
+      description:
+        "Reliable and efficient point of sale terminals for all business types.",
       image: "/placeholder.svg?key=pos-terminals",
       products: [
         {
@@ -25,7 +26,8 @@ export const hardwareData = {
         },
         {
           name: "DigiPOS Lite Terminal",
-          description: "Compact and affordable POS terminal perfect for small businesses and food trucks.",
+          description:
+            "Compact and affordable POS terminal perfect for small businesses and food trucks.",
           image: "/placeholder.svg?key=pos-terminal-lite",
           specifications: [
             '12" HD Touchscreen',
@@ -39,7 +41,8 @@ export const hardwareData = {
         },
         {
           name: "DigiPOS Mobile Terminal",
-          description: "Portable POS terminal with integrated payment processing for businesses on the go.",
+          description:
+            "Portable POS terminal with integrated payment processing for businesses on the go.",
           image: "/placeholder.svg?key=pos-terminal-mobile",
           specifications: [
             '8" HD Touchscreen',
@@ -56,12 +59,14 @@ export const hardwareData = {
     {
       id: "self-ordering-kiosks",
       title: "Self-Ordering Kiosks",
-      description: "Interactive self-service kiosks that reduce wait times and improve customer experience.",
+      description:
+        "Interactive self-service kiosks that reduce wait times and improve customer experience.",
       image: "/placeholder.svg?key=self-ordering-kiosks",
       products: [
         {
           name: "DigiPOS Kiosk Pro",
-          description: "Free-standing self-ordering kiosk with large touchscreen and integrated payment processing.",
+          description:
+            "Free-standing self-ordering kiosk with large touchscreen and integrated payment processing.",
           image: "/placeholder.svg?key=kiosk-pro",
           specifications: [
             '22" Full HD Touchscreen',
@@ -75,7 +80,8 @@ export const hardwareData = {
         },
         {
           name: "DigiPOS Kiosk Countertop",
-          description: "Compact countertop self-ordering kiosk for space-constrained environments.",
+          description:
+            "Compact countertop self-ordering kiosk for space-constrained environments.",
           image: "/placeholder.svg?key=kiosk-countertop",
           specifications: [
             '15.6" Full HD Touchscreen',
@@ -92,12 +98,14 @@ export const hardwareData = {
     {
       id: "peripherals",
       title: "Peripherals",
-      description: "Essential peripherals to complete your POS system, including printers, scanners, and cash drawers.",
+      description:
+        "Essential peripherals to complete your POS system, including printers, scanners, and cash drawers.",
       image: "/placeholder.svg?key=peripherals",
       products: [
         {
           name: "DigiPOS Thermal Receipt Printer",
-          description: "Fast and reliable thermal receipt printer with multiple connectivity options.",
+          description:
+            "Fast and reliable thermal receipt printer with multiple connectivity options.",
           image: "/placeholder.svg?key=receipt-printer",
           specifications: [
             "80mm Thermal Printer",
@@ -111,7 +119,8 @@ export const hardwareData = {
         },
         {
           name: "DigiPOS Barcode Scanner",
-          description: "High-performance 1D/2D barcode scanner for quick and accurate scanning.",
+          description:
+            "High-performance 1D/2D barcode scanner for quick and accurate scanning.",
           image: "/placeholder.svg?key=barcode-scanner",
           specifications: [
             "1D/2D Barcode Scanning",
@@ -125,7 +134,8 @@ export const hardwareData = {
         },
         {
           name: "DigiPOS Cash Drawer",
-          description: "Durable cash drawer with multiple compartments for bills and coins.",
+          description:
+            "Durable cash drawer with multiple compartments for bills and coins.",
           image: "/placeholder.svg?key=cash-drawer",
           specifications: [
             "5 Bill Compartments, 8 Coin Compartments",
@@ -142,15 +152,16 @@ export const hardwareData = {
   ],
   compatibilityFeatures: [
     {
-      icon: <Wifi className="h-6 w-6 text-white" />,
+      icon: { type: Wifi, props: { className: "h-6 w-6 text-white" } },
       title: "Seamless Integration",
       description:
         "All hardware components are designed to work perfectly with DigiPOS software, ensuring plug-and-play functionality.",
     },
     {
-      icon: <Shield className="h-6 w-6 text-white" />,
+      icon: { type: Shield, props: { className: "h-6 w-6 text-white" } },
       title: "Secure Transactions",
-      description: "Our payment terminals use the latest encryption technology to keep customer data safe and secure.",
+      description:
+        "Our payment terminals use the latest encryption technology to keep customer data safe and secure.",
     },
   ],
-}
+};

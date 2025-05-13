@@ -1,15 +1,16 @@
 import {
-  Monitor,
-  ShoppingBag,
   BarChart3,
-  Package,
-  Utensils,
-  Users,
-  CreditCard,
   Clock,
-  Smartphone,
+  CreditCard,
   Layers,
-} from "lucide-react"
+  Monitor,
+  Package,
+  ShoppingBag,
+  Smartphone,
+  Users,
+  Utensils,
+} from "lucide-react";
+import React from "react";
 
 export const productData = {
   "front-office": [
@@ -22,32 +23,47 @@ export const productData = {
       image: "/placeholder.svg?key=cloud-pos",
       features: [
         {
-          icon: <Monitor className="h-5 w-5 text-indigo-600" />,
+          icon: React.createElement(Monitor, {
+            className: "h-5 w-5 text-indigo-600",
+          }),
           title: "Intuitive Interface",
-          description: "User-friendly design that requires minimal training for staff.",
+          description:
+            "User-friendly design that requires minimal training for staff.",
         },
         {
-          icon: <ShoppingBag className="h-5 w-5 text-indigo-600" />,
+          icon: React.createElement(ShoppingBag, {
+            className: "h-5 w-5 text-indigo-600",
+          }),
           title: "Order Management",
           description: "Easily create, modify, and track orders in real-time.",
         },
         {
-          icon: <BarChart3 className="h-5 w-5 text-indigo-600" />,
+          icon: React.createElement(BarChart3, {
+            className: "h-5 w-5 text-indigo-600",
+          }),
           title: "Real-time Analytics",
           description: "Access sales data and performance metrics instantly.",
         },
         {
-          icon: <Package className="h-5 w-5 text-indigo-600" />,
+          icon: React.createElement(Package, {
+            className: "h-5 w-5 text-indigo-600",
+          }),
           title: "Inventory Tracking",
-          description: "Monitor stock levels and get automatic alerts when items run low.",
+          description:
+            "Monitor stock levels and get automatic alerts when items run low.",
         },
         {
-          icon: <CreditCard className="h-5 w-5 text-indigo-600" />,
+          icon: React.createElement(CreditCard, {
+            className: "h-5 w-5 text-indigo-600",
+          }),
           title: "Multiple Payment Options",
-          description: "Accept various payment methods including credit cards, mobile payments, and cash.",
+          description:
+            "Accept various payment methods including credit cards, mobile payments, and cash.",
         },
         {
-          icon: <Users className="h-5 w-5 text-indigo-600" />,
+          icon: React.createElement(Users, {
+            className: "h-5 w-5 text-indigo-600",
+          }),
           title: "Customer Management",
           description: "Build customer profiles and track purchase history.",
         },
@@ -55,7 +71,8 @@ export const productData = {
       benefits: [
         {
           title: "Increased Efficiency",
-          description: "Reduce wait times and streamline operations with our intuitive system.",
+          description:
+            "Reduce wait times and streamline operations with our intuitive system.",
         },
         {
           title: "Enhanced Customer Experience",
@@ -63,7 +80,8 @@ export const productData = {
         },
         {
           title: "Data-Driven Decisions",
-          description: "Make informed business choices based on comprehensive analytics.",
+          description:
+            "Make informed business choices based on comprehensive analytics.",
         },
         {
           title: "Reduced Errors",
@@ -82,21 +100,28 @@ export const productData = {
       slug: "waiter-tab",
       title: "Waiter Tab",
       shortDescription: "Mobile ordering solution for efficient table service.",
-      description: "Empower your waitstaff with mobile ordering capabilities that enhance service speed and accuracy.",
+      description:
+        "Empower your waitstaff with mobile ordering capabilities that enhance service speed and accuracy.",
       image: "/placeholder.svg?key=waiter-tab",
       features: [
         {
-          icon: <Smartphone className="h-5 w-5 text-indigo-600" />,
+          icon: React.createElement(Smartphone, {
+            className: "h-5 w-5 text-indigo-600",
+          }),
           title: "Mobile Ordering",
           description: "Take orders tableside with tablets or smartphones.",
         },
         {
-          icon: <Clock className="h-5 w-5 text-indigo-600" />,
+          icon: React.createElement(Clock, {
+            className: "h-5 w-5 text-indigo-600",
+          }),
           title: "Real-time Updates",
           description: "Instantly send orders to the kitchen and bar.",
         },
         {
-          icon: <Users className="h-5 w-5 text-indigo-600" />,
+          icon: React.createElement(Users, {
+            className: "h-5 w-5 text-indigo-600",
+          }),
           title: "Table Management",
           description: "Easily assign and track tables for each server.",
         },
@@ -104,7 +129,8 @@ export const productData = {
       benefits: [
         {
           title: "Faster Service",
-          description: "Reduce time between order taking and kitchen preparation.",
+          description:
+            "Reduce time between order taking and kitchen preparation.",
         },
         {
           title: "Increased Accuracy",
@@ -112,7 +138,8 @@ export const productData = {
         },
         {
           title: "Enhanced Productivity",
-          description: "Servers can handle more tables with greater efficiency.",
+          description:
+            "Servers can handle more tables with greater efficiency.",
         },
       ],
       testimonial: {
@@ -132,19 +159,26 @@ export const productData = {
       image: "/placeholder.svg?key=digikds",
       features: [
         {
-          icon: <Layers className="h-5 w-5 text-indigo-600" />,
+          icon: React.createElement(Layers, {
+            className: "h-5 w-5 text-indigo-600",
+          }),
           title: "Order Prioritization",
           description: "Automatically sort orders by priority and timing.",
         },
         {
-          icon: <Clock className="h-5 w-5 text-indigo-600" />,
+          icon: React.createElement(Clock, {
+            className: "h-5 w-5 text-indigo-600",
+          }),
           title: "Timing Alerts",
           description: "Visual alerts for orders that are taking too long.",
         },
         {
-          icon: <Utensils className="h-5 w-5 text-indigo-600" />,
+          icon: React.createElement(Utensils, {
+            className: "h-5 w-5 text-indigo-600",
+          }),
           title: "Station Routing",
-          description: "Direct different items to appropriate kitchen stations.",
+          description:
+            "Direct different items to appropriate kitchen stations.",
         },
       ],
       benefits: [
@@ -158,7 +192,8 @@ export const productData = {
         },
         {
           title: "Improved Timing",
-          description: "Better coordination ensures food is served at optimal temperature.",
+          description:
+            "Better coordination ensures food is served at optimal temperature.",
         },
       ],
       testimonial: {
@@ -180,25 +215,34 @@ export const productData = {
       image: "/placeholder.svg?key=menu-management",
       features: [
         {
-          icon: <Layers className="h-5 w-5 text-indigo-600" />,
+          icon: React.createElement(Layers, {
+            className: "h-5 w-5 text-indigo-600",
+          }),
           title: "Menu Builder",
-          description: "Create and organize menus with drag-and-drop simplicity.",
+          description:
+            "Create and organize menus with drag-and-drop simplicity.",
         },
         {
-          icon: <BarChart3 className="h-5 w-5 text-indigo-600" />,
+          icon: React.createElement(BarChart3, {
+            className: "h-5 w-5 text-indigo-600",
+          }),
           title: "Price Management",
           description: "Set prices, discounts, and special offers with ease.",
         },
         {
-          icon: <Clock className="h-5 w-5 text-indigo-600" />,
+          icon: React.createElement(Clock, {
+            className: "h-5 w-5 text-indigo-600",
+          }),
           title: "Seasonal Menus",
-          description: "Schedule menu changes for different times of day or seasons.",
+          description:
+            "Schedule menu changes for different times of day or seasons.",
         },
       ],
       benefits: [
         {
           title: "Menu Flexibility",
-          description: "Easily update offerings based on ingredient availability or seasonality.",
+          description:
+            "Easily update offerings based on ingredient availability or seasonality.",
         },
         {
           title: "Consistent Pricing",
@@ -206,7 +250,8 @@ export const productData = {
         },
         {
           title: "Time Savings",
-          description: "Quickly make menu changes without reprinting physical menus.",
+          description:
+            "Quickly make menu changes without reprinting physical menus.",
         },
       ],
       testimonial: {
@@ -226,25 +271,34 @@ export const productData = {
       image: "/placeholder.svg?key=inventory-management",
       features: [
         {
-          icon: <Package className="h-5 w-5 text-indigo-600" />,
+          icon: React.createElement(Package, {
+            className: "h-5 w-5 text-indigo-600",
+          }),
           title: "Stock Tracking",
-          description: "Monitor inventory levels in real-time across locations.",
+          description:
+            "Monitor inventory levels in real-time across locations.",
         },
         {
-          icon: <BarChart3 className="h-5 w-5 text-indigo-600" />,
+          icon: React.createElement(BarChart3, {
+            className: "h-5 w-5 text-indigo-600",
+          }),
           title: "Usage Reports",
           description: "Analyze consumption patterns and identify waste.",
         },
         {
-          icon: <Clock className="h-5 w-5 text-indigo-600" />,
+          icon: React.createElement(Clock, {
+            className: "h-5 w-5 text-indigo-600",
+          }),
           title: "Automated Ordering",
-          description: "Set reorder points and generate purchase orders automatically.",
+          description:
+            "Set reorder points and generate purchase orders automatically.",
         },
       ],
       benefits: [
         {
           title: "Reduced Waste",
-          description: "Better tracking leads to less spoilage and overordering.",
+          description:
+            "Better tracking leads to less spoilage and overordering.",
         },
         {
           title: "Cost Control",
@@ -268,23 +322,31 @@ export const productData = {
     {
       slug: "retail-pos",
       title: "Cloud Point of Sales for Retail",
-      shortDescription: "In-depth sales analysis and performance tracking for retail.",
+      shortDescription:
+        "In-depth sales analysis and performance tracking for retail.",
       description:
         "A specialized point of sale system designed specifically for retail businesses with features for inventory management, customer loyalty, and sales tracking.",
       image: "/placeholder.svg?key=retail-pos",
       features: [
         {
-          icon: <ShoppingBag className="h-5 w-5 text-indigo-600" />,
+          icon: React.createElement(ShoppingBag, {
+            className: "h-5 w-5 text-indigo-600",
+          }),
           title: "Barcode Scanning",
-          description: "Quickly process items with integrated barcode scanning.",
+          description:
+            "Quickly process items with integrated barcode scanning.",
         },
         {
-          icon: <Users className="h-5 w-5 text-indigo-600" />,
+          icon: React.createElement(Users, {
+            className: "h-5 w-5 text-indigo-600",
+          }),
           title: "Loyalty Program",
           description: "Build customer loyalty with points and rewards.",
         },
         {
-          icon: <Package className="h-5 w-5 text-indigo-600" />,
+          icon: React.createElement(Package, {
+            className: "h-5 w-5 text-indigo-600",
+          }),
           title: "Inventory Management",
           description: "Track stock levels across multiple locations.",
         },
@@ -312,7 +374,7 @@ export const productData = {
       },
     },
   ],
-}
+};
 
 export const categoryInfo = {
   "front-office": {
@@ -325,19 +387,23 @@ export const categoryInfo = {
     benefits: [
       {
         title: "Enhanced Customer Experience",
-        description: "Provide faster, more personalized service that keeps customers coming back.",
+        description:
+          "Provide faster, more personalized service that keeps customers coming back.",
       },
       {
         title: "Streamlined Operations",
-        description: "Reduce wait times and improve staff efficiency with intuitive tools.",
+        description:
+          "Reduce wait times and improve staff efficiency with intuitive tools.",
       },
       {
         title: "Real-time Insights",
-        description: "Access performance data instantly to make informed decisions.",
+        description:
+          "Access performance data instantly to make informed decisions.",
       },
       {
         title: "Increased Sales",
-        description: "Upselling features and faster service lead to higher average tickets.",
+        description:
+          "Upselling features and faster service lead to higher average tickets.",
       },
     ],
   },
@@ -346,23 +412,28 @@ export const categoryInfo = {
     description:
       "Optimize your behind-the-scenes operations with powerful management tools that reduce costs and improve efficiency.",
     image: "/placeholder.svg?key=back-office",
-    benefitsDescription: "Our back office solutions provide the foundation for a well-run, profitable business.",
+    benefitsDescription:
+      "Our back office solutions provide the foundation for a well-run, profitable business.",
     benefits: [
       {
         title: "Cost Control",
-        description: "Better inventory and resource management reduces waste and overhead.",
+        description:
+          "Better inventory and resource management reduces waste and overhead.",
       },
       {
         title: "Time Savings",
-        description: "Automation of routine tasks frees up management for strategic work.",
+        description:
+          "Automation of routine tasks frees up management for strategic work.",
       },
       {
         title: "Data-Driven Decisions",
-        description: "Comprehensive reporting helps you identify opportunities and challenges.",
+        description:
+          "Comprehensive reporting helps you identify opportunities and challenges.",
       },
       {
         title: "Scalability",
-        description: "Systems that grow with your business from single location to enterprise.",
+        description:
+          "Systems that grow with your business from single location to enterprise.",
       },
     ],
   },
@@ -371,7 +442,8 @@ export const categoryInfo = {
     description:
       "Specialized tools designed specifically for retail businesses to manage inventory, process sales, and build customer loyalty.",
     image: "/placeholder.svg?key=retail",
-    benefitsDescription: "Our retail solutions help you compete in today's challenging marketplace.",
+    benefitsDescription:
+      "Our retail solutions help you compete in today's challenging marketplace.",
     benefits: [
       {
         title: "Inventory Optimization",
@@ -379,7 +451,8 @@ export const categoryInfo = {
       },
       {
         title: "Customer Insights",
-        description: "Understand buying patterns and preferences to tailor your offerings.",
+        description:
+          "Understand buying patterns and preferences to tailor your offerings.",
       },
       {
         title: "Omnichannel Integration",
@@ -387,8 +460,9 @@ export const categoryInfo = {
       },
       {
         title: "Loss Prevention",
-        description: "Better tracking and controls to reduce shrinkage and theft.",
+        description:
+          "Better tracking and controls to reduce shrinkage and theft.",
       },
     ],
   },
-}
+};

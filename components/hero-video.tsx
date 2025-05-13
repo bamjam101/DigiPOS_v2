@@ -46,13 +46,13 @@ export default function HeroVideo() {
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: isLoaded ? 1 : 0, y: isLoaded ? 0 : 20 }}
       transition={{ duration: 0.5, delay: 0.2 }}
-      className="relative rounded-xl overflow-hidden shadow-2xl mt-12"
-      style={{ minHeight: "300px" }} // Added minimum height
+      className="relative rounded-xl overflow-hidden shadow-2xl mt-12 bg-background"
+      style={{ minHeight: "300px" }}
     >
       {/* Loading placeholder */}
       {!isLoaded && (
-        <div className="absolute inset-0 bg-gray-200 animate-pulse flex items-center justify-center">
-          <div className="text-gray-400">Loading video...</div>
+        <div className="absolute inset-0 bg-background-light animate-pulse flex items-center justify-center">
+          <div className="text-text-light">Loading video...</div>
         </div>
       )}
 
@@ -73,14 +73,14 @@ export default function HeroVideo() {
         <div className="flex items-center justify-between">
           <button
             onClick={togglePlay}
-            className="bg-white/20 backdrop-blur-sm rounded-full p-2 text-white hover:bg-white/30 transition-colors"
+            className="bg-primary-light/20 backdrop-blur-sm rounded-full p-2 text-white hover:bg-primary-light/30 transition-colors"
           >
             {isPlaying ? <Pause size={20} /> : <Play size={20} />}
           </button>
 
           <button
             onClick={toggleMute}
-            className="bg-white/20 backdrop-blur-sm rounded-full p-2 text-white hover:bg-white/30 transition-colors"
+            className="bg-primary-light/20 backdrop-blur-sm rounded-full p-2 text-white hover:bg-primary-light/30 transition-colors"
           >
             {isMuted ? <VolumeX size={20} /> : <Volume2 size={20} />}
           </button>
@@ -88,7 +88,7 @@ export default function HeroVideo() {
       </div>
 
       {/* Video overlay gradient */}
-      <div className="absolute inset-0 bg-gradient-to-br from-indigo-900/10 via-transparent to-orange-500/10 pointer-events-none"></div>
+      <div className="absolute inset-0 bg-gradient-to-br from-primary-light/10 via-transparent to-secondary-light/10 pointer-events-none"></div>
     </motion.div>
   );
 }

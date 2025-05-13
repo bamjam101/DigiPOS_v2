@@ -88,17 +88,17 @@ const logos = [
 
 export default function ClienteleSection() {
   return (
-    <div className="py-20 bg-gradient-to-br from-gray-50 via-indigo-50/30 to-gray-50 overflow-hidden">
+    <div className="py-20 bg-gradient-to-br from-background-light via-primary-light/30 to-background-light overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-12">
-        <div className="inline-block bg-indigo-600/90 backdrop-blur-sm text-white text-xs font-medium px-3 py-1 rounded-full mb-4">
+        <div className="inline-block bg-primary text-white text-xs font-medium px-3 py-1 rounded-full mb-4">
           ECOSYSTEM
         </div>
-        <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+        <h2 className="text-4xl md:text-5xl font-bold text-text mb-4">
           Interoperable Restaurant
           <br />
           Ecosystem
         </h2>
-        <p className="text-lg text-gray-600 max-w-2xl">
+        <p className="text-lg text-text-light max-w-2xl">
           Our platform integrates with leading restaurant chains and food
           service providers, ensuring seamless operations across your entire
           business network.
@@ -225,7 +225,7 @@ function LogoItem({
 
   return (
     <motion.div
-      className="flex-shrink-0 w-28 h-28 rounded-xl bg-white/40 backdrop-blur-md border border-white/50 shadow-lg flex items-center justify-center overflow-hidden cursor-pointer"
+      className="flex-shrink-0 w-28 h-28 rounded-xl bg-background-light backdrop-blur-md border border-background shadow-lg flex items-center justify-center overflow-hidden cursor-pointer"
       style={{
         boxShadow: isHovered
           ? `0 10px 25px -5px ${logo.color}40, 0 8px 10px -6px ${logo.color}30`

@@ -1,8 +1,8 @@
-import Image from "next/image"
-import Link from "next/link"
-import { Button } from "@/components/ui/button"
-import { ChevronRight, Check } from "lucide-react"
-import { hardwareData } from "@/data/hardware"
+import { Button } from "@/components/ui/button";
+import { hardwareData } from "@/data/hardware";
+import { Check, ChevronRight } from "lucide-react";
+import Image from "next/image";
+import Link from "next/link";
 
 export default function HardwarePage() {
   return (
@@ -31,8 +31,8 @@ export default function HardwarePage() {
               Complete Hardware Solutions
             </h1>
             <p className="text-xl text-gray-500 max-w-3xl mx-auto">
-              Discover our range of high-quality hardware solutions designed to optimize your business operations and
-              enhance customer experience.
+              Discover our range of high-quality hardware solutions designed to
+              optimize your business operations and enhance customer experience.
             </p>
           </div>
 
@@ -44,7 +44,9 @@ export default function HardwarePage() {
               >
                 <div className="aspect-video relative overflow-hidden">
                   <Image
-                    src={category.image || "/placeholder.svg?key=hardware-category"}
+                    src={
+                      category.image || "/placeholder.svg?key=hardware-category"
+                    }
                     alt={category.title}
                     width={400}
                     height={225}
@@ -52,7 +54,9 @@ export default function HardwarePage() {
                   />
                 </div>
                 <div className="p-6">
-                  <h3 className="text-xl font-semibold text-gray-900 mb-2">{category.title}</h3>
+                  <h3 className="text-xl font-semibold text-gray-900 mb-2">
+                    {category.title}
+                  </h3>
                   <p className="text-gray-500 mb-4">{category.description}</p>
                   <Link
                     href={`#${category.id}`}
@@ -73,12 +77,18 @@ export default function HardwarePage() {
         <section
           key={category.id}
           id={category.id}
-          className={`py-16 ${categoryIndex % 2 === 0 ? "bg-gray-50" : "bg-white"}`}
+          className={`py-16 ${
+            categoryIndex % 2 === 0 ? "bg-gray-50" : "bg-white"
+          }`}
         >
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
-              <h2 className="text-3xl font-bold text-gray-900">{category.title}</h2>
-              <p className="mt-4 text-xl text-gray-500 max-w-3xl mx-auto">{category.description}</p>
+              <h2 className="text-3xl font-bold text-gray-900">
+                {category.title}
+              </h2>
+              <p className="mt-4 text-xl text-gray-500 max-w-3xl mx-auto">
+                {category.description}
+              </p>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -90,7 +100,10 @@ export default function HardwarePage() {
                   <div className="md:flex">
                     <div className="md:flex-shrink-0 md:w-1/3">
                       <Image
-                        src={product.image || "/placeholder.svg?key=hardware-product"}
+                        src={
+                          product.image ||
+                          "/placeholder.svg?key=hardware-product"
+                        }
                         alt={product.name}
                         width={300}
                         height={300}
@@ -98,10 +111,16 @@ export default function HardwarePage() {
                       />
                     </div>
                     <div className="p-6 md:w-2/3">
-                      <h3 className="text-lg font-semibold text-gray-900 mb-2">{product.name}</h3>
-                      <p className="text-gray-500 text-sm mb-4">{product.description}</p>
+                      <h3 className="text-lg font-semibold text-gray-900 mb-2">
+                        {product.name}
+                      </h3>
+                      <p className="text-gray-500 text-sm mb-4">
+                        {product.description}
+                      </p>
                       <div className="mb-4">
-                        <h4 className="text-sm font-medium text-gray-700 mb-2">Key Specifications:</h4>
+                        <h4 className="text-sm font-medium text-gray-700 mb-2">
+                          Key Specifications:
+                        </h4>
                         <ul className="text-sm text-gray-500 space-y-1">
                           {product.specifications.map((spec, specIndex) => (
                             <li key={specIndex} className="flex items-start">
@@ -116,7 +135,9 @@ export default function HardwarePage() {
                           {product.availability ? (
                             <span className="text-green-600">In Stock</span>
                           ) : (
-                            <span className="text-orange-600">Contact for Availability</span>
+                            <span className="text-orange-600">
+                              Contact for Availability
+                            </span>
                           )}
                         </div>
                         <Button
@@ -140,19 +161,21 @@ export default function HardwarePage() {
       <section className="bg-indigo-900 text-white py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold mb-4">Compatible with DigiPOS Software</h2>
+            <h2 className="text-3xl font-bold mb-4">
+              Compatible with DigiPOS Software
+            </h2>
             <p className="text-xl text-indigo-200 max-w-3xl mx-auto">
-              All our hardware solutions are fully compatible with DigiPOS software, ensuring seamless integration and
-              optimal performance.
+              All our hardware solutions are fully compatible with DigiPOS
+              software, ensuring seamless integration and optimal performance.
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {hardwareData.compatibilityFeatures.map((feature, index) => (
               <div key={index} className="bg-indigo-800 rounded-lg p-6">
-                <div className="w-12 h-12 bg-indigo-700 rounded-full flex items-center justify-center mb-4">
+                {/* <div className="w-12 h-12 bg-indigo-700 rounded-full flex items-center justify-center mb-4">
                   {feature.icon}
-                </div>
+                </div> */}
                 <h3 className="text-xl font-semibold mb-2">{feature.title}</h3>
                 <p className="text-indigo-200">{feature.description}</p>
               </div>
@@ -164,18 +187,26 @@ export default function HardwarePage() {
       {/* CTA Section */}
       <section className="bg-white py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl font-bold text-gray-900 mb-6">Need help choosing the right hardware?</h2>
+          <h2 className="text-3xl font-bold text-gray-900 mb-6">
+            Need help choosing the right hardware?
+          </h2>
           <p className="text-xl text-gray-500 mb-8 max-w-3xl mx-auto">
-            Our hardware specialists can help you select the perfect equipment for your business needs.
+            Our hardware specialists can help you select the perfect equipment
+            for your business needs.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
-            <Button className="bg-indigo-600 hover:bg-indigo-700 text-white px-6 py-3">Talk to a Specialist</Button>
-            <Button variant="outline" className="border-indigo-600 text-indigo-600 hover:bg-indigo-50 px-6 py-3">
+            <Button className="bg-indigo-600 hover:bg-indigo-700 text-white px-6 py-3">
+              Talk to a Specialist
+            </Button>
+            <Button
+              variant="outline"
+              className="border-indigo-600 text-indigo-600 hover:bg-indigo-50 px-6 py-3"
+            >
               Download Hardware Catalog
             </Button>
           </div>
         </div>
       </section>
     </main>
-  )
+  );
 }
